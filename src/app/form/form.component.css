@@ -1,0 +1,96 @@
+:host {
+  width: 600px;
+  display: block;
+  margin: 5rem auto;
+}
+
+footer {
+  display: flex;
+}
+
+footer > * {
+  margin-right: 1rem;
+}
+
+select {
+  font-family: var(--laser-font-family);
+  font-weight: var(--laser-font-weight, 400);
+  font-size: 16px;
+  box-sizing: border-box;
+  padding: 4px 8px;
+  color: var(--laser-form-value, #212529);
+  border-width: 1px;
+  border-radius: 0;
+  border-style: solid;
+  border-color: var(--laser-form-border, #909ca7);
+  background-color: #fff;
+  min-width: 192px;
+  width: 100%;
+  height: 36px;
+}
+
+select.ng-invalid {
+  border-color: var(--laser-form-error, #909ca7);
+}
+
+input {
+  font-family: var(--laser-font-family);
+  font-weight: var(--laser-font-weight, 400);
+  font-size: 16px;
+  box-sizing: border-box;
+  padding: 4px 8px;
+  color: var(--laser-form-value, #212529);
+  border-width: 1px;
+  border-radius: 0;
+  border-style: solid;
+  border-color: var(--laser-form-border, #909ca7);
+  background-color: #fff;
+  min-width: 192px;
+  width: 100%;
+  height: 36px;
+}
+
+input.ng-invalid {
+  border-color: var(--laser-form-error, #909ca7);
+}
+
+input[type="radio"] {
+  display: none;
+}
+
+input[type="radio"] + span {
+  cursor: pointer;
+  font-family: var(--laser-font-family);
+  font-weight: var(--laser-font-weight-bold, 700);
+  font-size: 16px;
+  color: var(--laser-radio-button-text-color);
+  background: var(--laser-radio-button-background-color);
+  padding: 12px 24px;
+  line-height: 24px;
+  margin: 4px;
+  box-shadow: 0 0 0 var(--button-glow-width) var(--button-glow-color);
+}
+
+input[type="radio"]:checked + span {
+  color: var(--laser-radio-button-text-color-checked);
+  background: var(--laser-radio-button-background-color-checked);
+}
+
+.radiogroup {
+  display: flex;
+  justify-content: flex-start;
+}
+
+section {
+  display: flex;
+  margin: 1rem;
+}
+
+section > label {
+  width: 12rem;
+  font-weight: 700;
+  text-align: right;
+  margin-right: 0.5rem;
+  align-self: center;
+  flex-shrink: 0;
+}

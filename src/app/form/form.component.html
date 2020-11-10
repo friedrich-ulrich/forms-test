@@ -1,0 +1,43 @@
+<h4>Form</h4>
+<article [formGroup]="form">
+  <section>
+    <label>Vorname</label>
+    <input formControlName="vorname" />
+  </section>
+  <div *ngIf="vorname.invalid && (vorname.touched || vorname.dirty)">
+    <p *ngIf="vorname.errors?.required">Vorname muss ausgefuellt werden.</p>
+    <p *ngIf="vorname.errors?.pattern">
+      Vorname muss mit einem Grossbuchstaben beginnen.
+    </p>
+    <p *ngIf="vorname.errors?.custom">bla bla</p>
+  </div>
+  <section>
+    <label>Nachname</label>
+    <input formControlName="nachname" />
+  </section>
+  <section>
+    <label>Name</label>
+    <input [hidden]="true" formControlName="name" />
+  </section>
+  <section>
+    <label>Adresse</label>
+    <input formControlName="adresse" />
+  </section>
+  <section>
+    <label>Postleitzahl</label>
+    <input formControlName="postleitzahl" />
+  </section>
+  <section>
+    <label>Ort</label>
+    <input formControlName="ort" />
+  </section>
+  <section>
+    <label>Land</label>
+    <input formControlName="land" />
+  </section>
+</article>
+<p *ngIf="form.errors?.ortland">Ort und Land muss ausgefuellt werden.</p>
+{{ form.value | json }}
+<footer>
+  <button [disabled]="form.invalid">Absenden</button>
+</footer>
